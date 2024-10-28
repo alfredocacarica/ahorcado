@@ -5,6 +5,7 @@ body {
             height: 100vh;
             background-color: #000;
         }
+      
 
         .tv {
             width: 500px;
@@ -41,14 +42,7 @@ body {
             transform: translateX(-50%);
             border-radius: 0 0 10px 10px;
         }
-button{
-    position: absolute;
-    top: 505px;
-    left: 680px;
-    z-index: 1;
-    background-color: #333;
-    mix-blend-mode: exclusion;
-}
+
         @keyframes flicker {
             0% { opacity: 1; }
             50% { opacity: 0.9; }
@@ -88,7 +82,7 @@ body{
     top: 105px;
     left: 65%;
     transform: translateX(-50%);
-    animation: rotate 5s linear infinite;
+    
 }
 
 .antenna::before, .antenna::after {
@@ -101,5 +95,23 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
+    #sierra img{
+    width: 140px;
+    position: absolute;
 
+    margin: 50px auto;
+    animation: rotate 5s linear infinite;
+    top:500px;
+    left: 680px;
+    
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
     
