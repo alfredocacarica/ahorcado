@@ -10,24 +10,48 @@
     <main>
   
     
-    <div class="tv" ></div>
+    <div class="tv" id="tv" ></div>
     
     <div class="legs"> </div>
     <div class="antenna"></div>
-    <div id="sierra" ><img src="NicePng_explicit-content-png_4386878.png" alt="" onclick="window.location.href='juego.html'" onmouseover="playAudio()" onmouseout="pauseAudio()"></div>
-    <audio id="myAudio" src="que empiece el juego.mp3" type="audio/mp3" autoplay></audio>
+    <audio id="myAudio" src="que empiece el juego.mp3" type="audio/mp3" ></audio>
+    <audio src="Five Nights at Freddy's 2 Static Game Over (Extended) - Ignition Ender (youtube).mp3" id="estatica"></audio>
+    <form name="encender">
+        <input type="button" name="boton" value="-----------" onclick="encenderTV" >
+    </form>
     <script>
         function playAudio() {
-            var audio = document.getElementById('myAudio');
-            audio.play();
-        }
+                var audio = document.getElementById('myAudio');
+                audio.play().then(function() {
+                    console.log('Audio is playing');
+                }).catch(function(error) {
+                    console.log('Playback prevented:', error);
+                });
+            }
 
-        function pauseAudio() {
-            var audio = document.getElementById('myAudio');
-            audio.pause();
-            audio.currentTime = 0;
-        }
+            function pauseAudio() {
+                var audio = document.getElementById('myAudio');
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        
+        function turnOnTV() {
+                var tv = document.getElementById("tv");
+                tv.style.backgroundImage = "url('saw.gif')";
+                tv.style.backgroundSize = "cover";
+            }
+            function redirectToAnotherPage() {
+                window.location.href = 'juego.html';
+            }
+             document.forms["encender"]["boton"].onclick = function() {
+                turnOnTV();
+                playAudio();
+                setTimeout(redirectToAnotherPage, 7000);   
+            };
+            
+                
     </script>
+    
 </main>
 </body>
 </html>

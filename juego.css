@@ -1,0 +1,39 @@
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+.poste{
+    background-color: rgb(133, 129, 125);
+    height: 500px;
+    width: 15px;
+}
+.barra{
+    background-color: #ff0707;
+    position: absolute;
+    top: 95px;
+    height: 20px;
+    width: 300px;
+}
+.cuerda{
+    background-color: #ff6e07;
+    height: 100px;
+    width: 4px;
+    position: absolute;
+    top: 109px;
+    left: 1040px;
+    
+    
+}
+        footer{
+            height: 300px;
+            background-size: cover;
+            
+        }
+        body{background-image: url();
+        background-size: cover;
+    background-repeat: no-repeat;}
