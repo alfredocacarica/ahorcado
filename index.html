@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>THE HANGED MAN</h1>
+        
+
+        <form name="botones">
+            <label for="jugar"></label>
+            <input type="button" name="jugar" value="Empezar">
+            <label for="Ranking"></label>
+            <input type="button" name="Ranking" value="Ranking">
+        </form>
+        
+        <div class="typewriter">
+            <h1>Locura</h1>
+        </div>
+        
+    <audio id="backgroundAudio" src="Combing Town West.mp3" loop></audio>
+    <button class="hidden-button" id="playAudioButton">Reproducir Audio</button>
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('backgroundAudio');
+            audio.play().catch(function(error) {
+                console.log('Playback prevented:', error);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById('playAudioButton').click();
+        });
+
+        document.getElementById('playAudioButton').addEventListener('click', function() {
+            playAudio();
+        });
+    </script>
+    </main>
+</body>
+</html>

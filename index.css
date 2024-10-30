@@ -1,0 +1,97 @@
+@font-face {
+    font-family: bloody;
+    src: url(BLOODY.TTF);
+}
+body{
+    font-family: bloody;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-image: url(protowallpaper2.jpg);
+    background-size: cover;
+    cursor: url("[CITYPNG.COM]HD\ Realistic\ Bloody\ Hand\ Print\ Image\ PNG\ -\ 5500x5500.png"), auto;
+    background-repeat: no-repeat;
+}
+input{
+    margin: 80px 500px;
+    display: grid;
+    grid-template-columns: 1,1fr;
+    text-align: center;
+    background-image: url(bloody\ button.png);
+    font-family: bloody;
+    font-size: 50px;
+    width: 200px;
+    background: transparent;
+    
+    
+    
+}
+input {
+    transition: transform 0.5s ease-in-out;
+}
+
+input:hover {
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+input {
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1{
+    margin-top: 80px;
+    font-size:3cm;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+h1 {
+    margin-top: 80px;
+    font-size: 3cm;
+    animation:blink 2s infinite 
+}
+
+h1 {
+    margin-top: 80px;
+    font-size: 4cm;
+    background: url('PikPng.com_blood-border-png_2452233.png') no-repeat center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    color:transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.typewriter h1 {
+    overflow: hidden;
+    border-right: .15em solid orange;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width:100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgba(88, 87, 87, 0); }
+}
+.hidden-button{
+    
+    
+}
+
