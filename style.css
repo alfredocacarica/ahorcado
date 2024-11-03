@@ -10,10 +10,10 @@ body {
         .tv {
             width: 700px;
             height: 350px;
-            background: #333;
-            border: 40px solid #222;
+            background: #0E0F0F;
+            border: 40px solid #0E0F0F;
             border-radius: 20px;
-            box-shadow: 10 0 20px rgba(0, 0, 0, 0.5);
+            box-shadow: 200 0 200px rgba(2, 1, 1, 0.863);
             position: relative;
             overflow: hidden;
             animation: flicker 1s infinite;
@@ -26,22 +26,16 @@ body {
 
 }
         }
-
-     
-            
-            
-        
-
-                @keyframes flicker {
-            0% { opacity: 1; }
-            50% { opacity: 0.9; }
-            100% { opacity: 1; }
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.9; }
+    100% { opacity: 1; }
         }
 body{
     background-image: url(PikPng.com_blood-border-png_2452233.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: gray;
+    background-color: rgb(20, 20, 20);
 }
 
 .legs {
