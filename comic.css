@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Evitar barras de desplazamiento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+.sidebar {
+    width: 20vw; 
+    background: black;
+    height: 100vh;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.Imagen {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%; 
+    height: auto;
+    animation: moveDown 300s linear infinite; 
+}
+
+@keyframes moveDown {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -10000%;
+    }
+}
