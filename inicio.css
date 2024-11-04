@@ -44,40 +44,6 @@ body {
     100% { opacity: 1; }
 }
 
-/* Antena de la TV */
-.antenna {
-    width: 10px;
-    height: 100px;
-    background: #555;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Piernas de la TV */
-.legs {
-    width: 10px;
-    height: 100px;
-    background: #222;
-    position: absolute;
-    bottom: -80px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.legs::after {
-    content: '';
-    position: absolute;
-    width: 95px;
-    height: 40px;
-    background: #222;
-    border-radius: 35px 35px 5px 5px;
-    bottom: 75px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 /* Estilo del botón "ON" */
 form input[type="button"] {
     position: absolute;
