@@ -1,7 +1,8 @@
 @font-face {
-    font-family: bloody ;
+    font-family: bloody;
     src: url(BLOODY.TTF);
 }
+
 body {
     margin: 0;
     overflow: hidden; /* Evitar barras de desplazamiento */
@@ -11,14 +12,15 @@ body {
     height: 100vh;
     background-color: black;
 }
+
 .sidebar {
-    width: 20vw; 
+    width: 20vw;
     background: black;
     height: 100vh;
 }
 
 .container {
-    width: 100vw;
+    width: 60vw;
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -30,7 +32,7 @@ body {
     left: 0;
     width: 100%; 
     height: auto;
-    animation: moveDown 90s linear forwards; 
+    animation: moveDown 90s linear forwards; /* La imagen se moverá hacia arriba durante 90 segundos */
 }
 
 @keyframes moveDown {
@@ -44,7 +46,7 @@ body {
 
 .skip-intro {
     position: absolute;
-   bottom: 10px;
+    bottom: 10px;
     right: 10px;
     padding: 10px 20px;
     background-color: #ff0000;
@@ -54,9 +56,10 @@ body {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    z-index: 1; 
+    z-index: 1;
+    transition: background-color 0.3s ease;
 }
 
 .skip-intro:hover {
-    background-color: #cc0000; 
+    background-color: #cc0000;
 }

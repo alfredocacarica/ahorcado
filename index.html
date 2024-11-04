@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>THE HANGED MAN</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -11,11 +11,8 @@
     <main>
         <h1>THE HANGED MAN</h1>
         
-
         <form name="botones">
-            <label for="jugar"></a></label>
-            <a href="comic.html"><input type="button" name="jugar" value="Empezar"></a>
-            <label for="Ranking"></label>
+            <input type="button" name="jugar" value="Empezar" onclick="window.location.href='comic.html'">
             <input type="button" name="Ranking" value="Ranking">
         </form>
         
@@ -23,24 +20,24 @@
             <h1>Locura</h1>
         </div>
         
-    <audio id="backgroundAudio" src="Combing Town West.mp3" loop></audio>
-    <button class="hidden-button" id="playAudioButton">Reproducir Audio</button>
-    <script>
-        function playAudio() {
-            var audio = document.getElementById('backgroundAudio');
-            audio.play().catch(function(error) {
-                console.log('Playback prevented:', error);
+        <audio id="backgroundAudio" src="Combing Town West.mp3" loop></audio>
+        <button class="hidden-button" id="playAudioButton">Reproducir Audio</button>
+        <script>
+            function playAudio() {
+                var audio = document.getElementById('backgroundAudio');
+                audio.play().catch(function(error) {
+                    console.log('Playback prevented:', error);
+                });
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById('playAudioButton').click();
             });
-        }
 
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById('playAudioButton').click();
-        });
-
-        document.getElementById('playAudioButton').addEventListener('click', function() {
-            playAudio();
-        });
-    </script>
+            document.getElementById('playAudioButton').addEventListener('click', function() {
+                playAudio();
+            });
+        </script>
     </main>
 </body>
 </html>

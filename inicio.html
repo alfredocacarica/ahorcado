@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Pantalla de Inicio</title>
+    <link rel="stylesheet" href="inicio.css">
 </head>
 <body>
     <main>
@@ -12,14 +12,19 @@
             <div class="tv" id="tv"></div>
             <div class="antenna"></div>
             <div class="legs"></div>
+
+            <!-- Audios -->
             <audio id="myAudio" src="que empiece el juego.mp3" type="audio/mp3"></audio>
             <audio id="secondAudio" src="Troll laughing LoL - sound effect - [High quality].mp3" type="audio/mp3"></audio>
             <audio id="estatica" src="Five Nights at Freddy's 2 Static Game Over (Extended) - Ignition Ender (youtube).mp3"></audio>
+
+            <!-- Botón de Encendido -->
             <form name="encender">
                 <input type="button" name="boton" value="ON">
             </form>
         </div>
 
+        <!-- JavaScript -->
         <script>
             function playAudio(audioId) {
                 var audio = document.getElementById(audioId);
@@ -28,12 +33,6 @@
                 }).catch(function(error) {
                     console.log('Playback prevented:', error);
                 });
-            }
-
-            function pauseAudio(audioId) {
-                var audio = document.getElementById(audioId);
-                audio.pause();
-                audio.currentTime = 0;
             }
 
             function turnOnTV(gifUrl) {
@@ -52,9 +51,8 @@
                     var myAudio = document.getElementById('myAudio');
                     myAudio.addEventListener('ended', function() {
                         turnOnTV('jigsaw-jigsaw-death.gif');
-                        var audio2 = document.getElementById('secondAudio');
                         playAudio('secondAudio').then(function() {
-                            setTimeout(redirectToAnotherPage,1500);
+                            setTimeout(redirectToAnotherPage, 1500);
                         });
                     });
                 });
