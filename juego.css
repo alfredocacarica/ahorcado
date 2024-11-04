@@ -1,39 +1,22 @@
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-.poste{
-    background-color: rgb(133, 129, 125);
-    height: 500px;
-    width: 15px;
+body{
+    margin: 0 0;
+    background-color: gray;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(what-is-the-most-disturbing-loading-screen-in-postal-1-v0-sas7iw07e18d1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-.barra{
-    background-color: #ff0707;
-    position: absolute;
-    top: 95px;
-    height: 20px;
-    width: 300px;
-}
-.cuerda{
-    background-color: #ff6e07;
-    height: 100px;
-    width: 4px;
-    position: absolute;
-    top: 109px;
-    left: 1040px;
+#borde-izquierdo{
     
-    
+    float: left;    
+    background-image: url(Metal-Frame-PNG-Free-Download.png);
+    height: 695px;
+    width: 110px;
 }
-        footer{
-            height: 300px;
-            background-size: cover;
-            
-        }
-        body{background-image: url();
-        background-size: cover;
-    background-repeat: no-repeat;}
+#borde-derecho{
+    background-image: url(Metal-Frame-PNG-Free-Download.png);
+    float: right;
+    height: 695px;
+    width: 110px;    
+}
