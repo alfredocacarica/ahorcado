@@ -8,52 +8,58 @@
 </head>
 <body>
     <main>
-  
-    <div class="tv-partes">
- <div class="tv" id="tv" ></div>
-    
-        
-   
-    <audio id="myAudio" src="que empiece el juego.mp3" type="audio/mp3" ></audio>
-    <audio src="Five Nights at Freddy's 2 Static Game Over (Extended) - Ignition Ender (youtube).mp3" id="estatica"></audio>
-    <form name="encender">
-        <input type="button" name="boton" value="ON" onclick="encenderTV" >
-    </form> 
-    </div>
-   
-    <script>
-        function playAudio() {
-                var audio = document.getElementById('myAudio');
-                audio.play().then(function() {
+        <div class="tv-partes">
+            <div class="tv" id="tv"></div>
+            <div class="antenna"></div>
+            <div class="legs"></div>
+            <audio id="myAudio" src="que empiece el juego.mp3" type="audio/mp3"></audio>
+            <audio id="secondAudio" src="Troll laughing LoL - sound effect - [High quality].mp3" type="audio/mp3"></audio>
+            <audio id="estatica" src="Five Nights at Freddy's 2 Static Game Over (Extended) - Ignition Ender (youtube).mp3"></audio>
+            <form name="encender">
+                <input type="button" name="boton" value="ON">
+            </form>
+        </div>
+
+        <script>
+            function playAudio(audioId) {
+                var audio = document.getElementById(audioId);
+                return audio.play().then(function() {
                     console.log('Audio is playing');
                 }).catch(function(error) {
                     console.log('Playback prevented:', error);
                 });
             }
 
-            function pauseAudio() {
-                var audio = document.getElementById('myAudio');
+            function pauseAudio(audioId) {
+                var audio = document.getElementById(audioId);
                 audio.pause();
                 audio.currentTime = 0;
             }
-        
-        function turnOnTV() {
+
+            function turnOnTV(gifUrl) {
                 var tv = document.getElementById("tv");
-                tv.style.backgroundImage = "url('saw.gif')";
+                tv.style.backgroundImage = "url('" + gifUrl + "')";
                 tv.style.backgroundSize = "cover";
             }
+
             function redirectToAnotherPage() {
                 window.location.href = 'juego.html';
             }
-             document.forms["encender"]["boton"].onclick = function() {
-                turnOnTV();
-                playAudio();
-                setTimeout(redirectToAnotherPage, 7000);   
+
+            document.forms["encender"]["boton"].onclick = function() {
+                turnOnTV('saw.gif');
+                playAudio('myAudio').then(function() {
+                    var myAudio = document.getElementById('myAudio');
+                    myAudio.addEventListener('ended', function() {
+                        turnOnTV('jigsaw-jigsaw-death.gif');
+                        var audio2 = document.getElementById('secondAudio');
+                        playAudio('secondAudio').then(function() {
+                            setTimeout(redirectToAnotherPage,1500);
+                        });
+                    });
+                });
             };
-            
-                
-    </script>
-    
-</main>
+        </script>
+    </main>
 </body>
 </html>
