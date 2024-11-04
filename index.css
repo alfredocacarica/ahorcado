@@ -20,6 +20,7 @@ input{
     background-image: url(bloody\ button.png);
     font-family: bloody;
     font-size: 50px;
+    border-style: none;
     width: 200px;
     background: transparent;
     
@@ -90,8 +91,5 @@ h1 {
     from, to { border-color: transparent }
     50% { border-color: rgba(88, 87, 87, 0); }
 }
-.hidden-button{
-    
-    
-}
+
 
