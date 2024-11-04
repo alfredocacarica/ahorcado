@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="juego.css">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="juego.css"> 
+    
 </head>
 <body>
-    <header>
-
-    </header>
     <main>
-<aside>
-    <div id="borde-izquierdo">
-        
-    </div>
-</aside>
+        <aside>
+            <div id="borde-izquierdo"></div>
+        </aside>
 
-<aside>
-    <div id="borde-derecho">
-        
-    </div>
-</aside>
+        <div class="game-container">
+            <p id="word-display">Palabra: _ _ _ _ _</p>
+            <p>Intentos restantes: <span id="attempts"></span></p>
+            <canvas id="hangman" width="200" height="200"></canvas>
+            <input type="text" id="letter-input" maxlength="1" placeholder="Ingresa una letra">
+            <button onclick="guessLetter()">Adivinar Letra</button>
+            <p id="message"></p>
+            <button onclick="resetGame()">Reiniciar Juego</button>
+        </div>
 
+        <aside>
+            <div id="borde-derecho"></div>
+        </aside>
     </main>
-    <footer>
-     
-    </footer>
-    
+
+    <script src="script.js"></script>
 </body>
 </html>

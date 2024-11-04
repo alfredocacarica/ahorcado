@@ -1,22 +1,27 @@
-body{
-    margin: 0 0;
+body {
+    margin: 0;
     background-color: gray;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(what-is-the-most-disturbing-loading-screen-in-postal-1-v0-sas7iw07e18d1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
-#borde-izquierdo{
-    
-    float: left;    
+#borde-izquierdo, #borde-derecho {
     background-image: url(Metal-Frame-PNG-Free-Download.png);
     height: 695px;
     width: 110px;
 }
-#borde-derecho{
-    background-image: url(Metal-Frame-PNG-Free-Download.png);
-    float: right;
-    height: 695px;
-    width: 110px;    
+#borde-izquierdo {
+    float: left;    
+}
+#borde-derecho {
+    float: right;    
+}
+.game-container {
+    text-align: center;
+    margin: 50px auto;
+    width: 300px; /* Ajusta el ancho del contenedor del juego */
+    color: white; /* Cambia el color del texto para que sea visible */
+}
+canvas {
+    margin-top: 20px;
 }
