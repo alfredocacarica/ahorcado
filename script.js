@@ -24,39 +24,43 @@
 
  // Función para adivinar una letra
  function guessLetter() {
-     const input = document.getElementById("letter-input");
-     const letter = input.value.toLowerCase();
+    const input = document.getElementById("letter-input");
+    const letter = input.value.toLowerCase();
 
-     if (!letter || guessedLetters.includes(letter)) {
-         document.getElementById("message").textContent = "Letra inválida o ya utilizada";
-         return;
-     }
+    if (!letter || guessedLetters.includes(letter)) {
+        document.getElementById("message").textContent = "Letra inválida o ya utilizada";
+        return;
+    }
 
-     guessedLetters.push(letter);
-     input.value = ""; // Limpiar el campo de entrada
+    guessedLetters.push(letter);
+    input.value = ""; // Limpiar el campo de entrada
 
-     // Verificar si la letra está en la palabra
-     if (chosenWord.includes(letter)) {
-         let newHiddenWord = "";
-         for (let i = 0; i < chosenWord.length; i++) {
-             newHiddenWord += guessedLetters.includes(chosenWord[i]) ? chosenWord[i] : "_";
-             newHiddenWord += " ";
-         }
-         hiddenWord = newHiddenWord.trim();
-     } else {
-         attempts--;
-         drawHangman();
-     }
+    // Verificar si la letra está en la palabra
+    if (chosenWord.includes(letter)) {
+        let newHiddenWord = "";
+        for (let i = 0; i < chosenWord.length; i++) {
+            newHiddenWord += guessedLetters.includes(chosenWord[i]) ? chosenWord[i] : "_";
+            newHiddenWord += " ";
+        }
+        hiddenWord = newHiddenWord.trim();
+    } else {
+        attempts--;
+        drawHangman();
+        // Reproducir el sonido de risa cuando el usuario se equivoque
+        const wrongSound = document.getElementById("wrong-sound");
+        wrongSound.play();
+    }
 
-     updateDisplay();
+    updateDisplay();
 
-     // Verificar si ganó o perdió
-     if (!hiddenWord.includes("_")) {
-         document.getElementById("message").textContent = "¡Felicidades, ganaste!";
-     } else if (attempts === 0) {
-         document.getElementById("message").textContent = `Perdiste, la palabra era "${chosenWord}"`;
-     }
- }
+    // Verificar si ganó o perdió
+    if (!hiddenWord.includes("_")) {
+        document.getElementById("message").textContent = "¡Felicidades, ganaste!";
+    } else if (attempts === 0) {
+        document.getElementById("message").textContent = `Perdiste, la palabra era "${chosenWord}"`;
+    }
+}
+
 
  // Dibujar el ahorcado en el canvas
  function drawHangman() {
