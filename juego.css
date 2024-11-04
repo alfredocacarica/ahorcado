@@ -3,10 +3,11 @@ body {
     background-color: gray;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(what-is-the-most-disturbing-loading-screen-in-postal-1-v0-sas7iw07e18d1.jpg);
+    background-image: url(postal1-loading-screen.gif);
+    font-family:bloody;
 }
 #borde-izquierdo, #borde-derecho {
-    background-image: url(Metal-Frame-PNG-Free-Download.png);
+    
     height: 695px;
     width: 110px;
 }
@@ -18,10 +19,31 @@ body {
 }
 .game-container {
     text-align: center;
-    margin: 50px auto;
+    margin: 200px auto;
     width: 300px; /* Ajusta el ancho del contenedor del juego */
     color: white; /* Cambia el color del texto para que sea visible */
 }
 canvas {
     margin-top: 20px;
+}
+@font-face {
+    font-family:bloody;
+    src: url(BLOODY.TTF);
+}
+input{
+    font-family:bloody;
+    color: aliceblue;
+    background-image: url(bloody_button.png);
+    width: 200px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    margin: 10px 3px;
+}
+button{
+    font-family:bloody;
+    color: aliceblue;
+    background-image: url(bloody_button.png);
+    width: 150px;
 }

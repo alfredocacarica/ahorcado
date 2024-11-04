@@ -15,5 +15,10 @@
     </div>
     
     <aside class="sidebar"></aside>
+    <audio id="hoverAudio" src="Dead Silence Soundtrack.mp3"></audio>
+    <script>
+        document.body.addEventListener('mouseover', function() { var audio = document.getElementById('hoverAudio'); 
+        audio.play().catch(function(error) { console.log('Playback prevented:', error); }); });
+    </script>
 </body>
 </html>

@@ -14,7 +14,7 @@
             <!-- Audios -->
             <audio id="myAudio" src="que empiece el juego.mp3" type="audio/mp3"></audio>
             <audio id="secondAudio" src="Troll laughing LoL - sound effect - [High quality].mp3" type="audio/mp3"></audio>
-            <audio id="estatica" src="Five Nights at Freddy's 2 Static Game Over (Extended) - Ignition Ender (youtube).mp3"></audio>
+
 
             <!-- Botón de Encendido -->
             <form name="encender">
@@ -55,7 +55,13 @@
                     });
                 });
             };
+            
+            
+        document.body.addEventListener('mouseover', function() { var audio = document.getElementById('hoverAudio'); 
+        audio.play().catch(function(error) { console.log('Playback prevented:', error); }); });
+    
         </script>
+        <audio id="hoverAudio" src="Five Nights at Freddy's 2 Static Game Over (Extended) - Ignition Ender (youtube).mp3"></audio>
     </main>
 </body>
 </html>
