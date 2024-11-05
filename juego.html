@@ -29,7 +29,11 @@
             <audio id="wrong-sound" src="risa billy (saw).mp3"></audio>
         </div>
     </main>
-
+    <audio id="hoverAudio" src="Pyramid Head's Lair.mp3"></audio>
+    <script>
+        document.body.addEventListener('mouseover', function() { var audio = document.getElementById('hoverAudio'); 
+        audio.play().catch(function(error) { console.log('Playback prevented:', error); }); });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
