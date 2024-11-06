@@ -46,7 +46,7 @@
     } else {
         attempts--;
         drawHangman();
-        // Reproducir el sonido de risa cuando el usuario se equivoque
+        
         const wrongSound = document.getElementById("wrong-sound");
         wrongSound.play();
     }

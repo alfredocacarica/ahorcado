@@ -15,29 +15,16 @@
             <input type="button" name="jugar" value="Empezar" onclick="window.location.href='comic.html'">
             <input type="button" name="Ranking" value="Ranking">
         </form>
-        
+        <div class="blood-drip"> <div class="drop"></div> <div class="drop"></div> <div class="drop"></div>
         <div class="typewriter">
             <h1>Locura</h1>
         </div>
-        
-        <audio id="backgroundAudio" src="Combing Town West.mp3" loop></audio>
-        <button class="hidden-button" id="playAudioButton">Reproducir Audio</button>
         <script>
-            function playAudio() {
-                var audio = document.getElementById('backgroundAudio');
-                audio.play().catch(function(error) {
-                    console.log('Playback prevented:', error);
-                });
-            }
-
-            document.addEventListener("DOMContentLoaded", function() {
-                document.getElementById('playAudioButton').click();
-            });
-
-            document.getElementById('playAudioButton').addEventListener('click', function() {
-                playAudio();
-            });
-        </script>
+        <audio id="hoverAudio" src="Combing Town West.mp3"></audio>  
+        document.body.addEventListener('mouseover', function() { var audio = document.getElementById('hoverAudio'); 
+        audio.play().catch(function(error) { console.log('Playback prevented:', error); }); });
+    </script>
+    
     </main>
 </body>
 </html>
