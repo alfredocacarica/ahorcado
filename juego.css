@@ -1,10 +1,14 @@
 body {
     margin: 0;
-    background-color: gray;
+    
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(postal1-loading-screen.gif);
-    font-family:bloody;
+    font-family:san;
+}
+@font-face {
+    font-family:san;
+    src: url(DearMrPazuzu-Regular.ttf);
 }
 #borde-izquierdo, #borde-derecho {
     
@@ -20,8 +24,8 @@ body {
 .game-container {
     text-align: center;
     margin: 200px auto;
-    width: 300px; /* Ajusta el ancho del contenedor del juego */
-    color: white; /* Cambia el color del texto para que sea visible */
+    width: 300px; 
+    color: white; 
 }
 canvas {
     margin-top: 20px;
@@ -31,8 +35,7 @@ canvas {
     src: url(BLOODY.TTF);
 }
 input{
-    font-family:bloody;
-    color: aliceblue;
+    font-family:bloody;   
     background-image: url(bloody_button.png);
     width: 200px;
     height: 30px;
@@ -40,6 +43,7 @@ input{
     background-repeat: no-repeat;
     background-color: black;
     margin: 10px 3px;
+    color: aliceblue;
 }
 button{
     font-family:bloody;

@@ -1,10 +1,11 @@
 @font-face {
-    font-family: bloody;
+    font-family:bloody;
     src: url(BLOODY.TTF);
 }
 
+
 body {
-    font-family: bloody;
+    font-family:bloody;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -20,6 +21,7 @@ a {
 }
 
 input {
+    font-family:san;
     margin: 80px 500px;
     display: grid;
     grid-template-columns: 1,1fr;
@@ -45,7 +47,7 @@ input {
     animation: fadeIn 2s ease-in-out;
 }
 
-h1 {
+h1{
     margin-top: 80px;
     font-size: 4cm;
     background: url('PikPng.com_blood-border-png_2452233.png') no-repeat center;
