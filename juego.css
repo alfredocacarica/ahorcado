@@ -1,20 +1,12 @@
 /* Estilos generales */
 body {
     margin: 0;
-    
+    background-color: gray;
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(postal1-loading-screen.gif);
-<<<<<<< HEAD
     font-family: bloody;
     color: white;
-=======
-    font-family:san;
-}
-@font-face {
-    font-family:san;
-    src: url(DearMrPazuzu-Regular.ttf);
->>>>>>> 46734d4db938983ace916a36518f3abf360474ec
 }
 
 /* Bordes laterales */
@@ -35,15 +27,9 @@ body {
 /* Contenedor del juego */
 .game-container {
     text-align: center;
-<<<<<<< HEAD
     margin: 100px auto;
     width: 300px; /* Ajusta el ancho del contenedor del juego */
     color: white; /* Cambia el color del texto para que sea visible */
-=======
-    margin: 200px auto;
-    width: 300px; 
-    color: white; 
->>>>>>> 46734d4db938983ace916a36518f3abf360474ec
 }
 
 /* Canvas del ahorcado */
@@ -56,16 +42,11 @@ canvas {
     font-family: bloody;
     src: url(BLOODY.TTF);
 }
-<<<<<<< HEAD
 
 /* Input de letra */
 input[type="text"] {
     font-family: bloody;
     color: aliceblue;
-=======
-input{
-    font-family:bloody;   
->>>>>>> 46734d4db938983ace916a36518f3abf360474ec
     background-image: url(bloody_button.png);
     width: 200px;
     height: 30px;
@@ -73,14 +54,10 @@ input{
     background-repeat: no-repeat;
     background-color: black;
     margin: 10px 3px;
-<<<<<<< HEAD
     text-align: center; /* Centra el texto en el input */
     border: none; /* Quita el borde del input */
     outline: none; /* Quita el borde al hacer clic en el input */
     padding: 5px; /* Ajusta el espaciado interno */
-=======
-    color: aliceblue;
->>>>>>> 46734d4db938983ace916a36518f3abf360474ec
 }
 
 /* Botones */
@@ -173,4 +150,4 @@ button:hover {
 #word-display, #message {
     font-size: 20px;
     margin-top: 20px;
-}
+}  
