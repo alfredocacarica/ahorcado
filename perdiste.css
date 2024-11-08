@@ -1,0 +1,28 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Evitar barras de desplazamiento */
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.ganaste {
+    width: 100vw; /* Ancho completo de la ventana */
+    height: 100vh; /* Alto completo de la ventana */
+    object-fit: cover; /* Cubrir toda la pantalla sin distorsión */
+    position: absolute; /* Posicionamiento absoluto para cubrir toda la pantalla */
+    top: 0;
+    left: 0;
+    image-rendering: auto;
+}
+
+.sidebar {
+    width: 20vw;
+    background: black;
+    height: 100vh;
+}

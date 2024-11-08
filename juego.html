@@ -5,36 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego del Ahorcado</title>
     <link rel="stylesheet" href="juego.css"> 
-    
 </head>
 <body>
+    <div id="hangman-container">
+        <img id="base" src="base.png" style="display: none;">
+        <img id="palo" src="palo.png" style="display: none;">
+        <img id="parte-arriba" src="parte_arriba.png" style="display: none;">
+        <img id="head" src="cabeza.png" style="display: none;">
+        <img id="body" src="tronco.png" style="display: none;">
+        <img id="right-arm" src="brazo_derecho.png" style="display: none;">
+        <img id="left-arm" src="brazo_izquierdo.png" style="display: none;">
+        <img id="right-leg" src="pierna_derecha.png" style="display: none;">
+        <img id="left-leg" src="pierna_izquierda.png" style="display: none;">
+    </div>
+    
     <main>
         <aside>
             <div id="borde-izquierdo"></div>
         </aside>
-
- 
         <aside>
             <div id="borde-derecho"></div>
         </aside>
         <div class="game-container">
             <p id="word-display">Palabra: _ _ _ _ _</p>
-            <p>Intentos restantes: <span id="attempts"></span></p>
-            <canvas id="hangman" width="200" height="200"></canvas>
+            <p>Intentos restantes: <span id="attempts">6</span></p>
             <input type="text" id="letter-input" maxlength="1" placeholder="Ingresa una letra">
             <button onclick="guessLetter()">Adivinar Letra</button>
             <p id="message"></p>
             <button onclick="resetGame()">Reiniciar Juego</button>
+
+            <!-- Audios para los eventos del juego -->
             <audio id="wrong-sound" src="risa billy (saw).mp3"></audio>
             <audio id="win-sound" src="Happy Wheels victory green screen.mp3"></audio> 
             <audio id="lose-sound" src="trompeta perdedor.mp3"></audio>
-          
         </div>
     </main>
-    <audio id="hoverAudio" src="On Silent Wings (Instrumental) (Remastered).mp3"></audio>
+    
+    <!-- Audio de fondo activado al mover el mouse -->
+    <audio id="hoverAudio" src="On Silent Wings (Instrumental) (Remastered).mp3" loop></audio>
     <script>
-        document.body.addEventListener('mouseover', function() { var audio = document.getElementById('hoverAudio'); 
-        audio.play().catch(function(error) { console.log('Playback prevented:', error); }); });
+        document.body.addEventListener('mouseover', function() {
+            var audio = document.getElementById('hoverAudio');
+            if (audio.paused) {
+                audio.play().catch(function(error) {
+                    console.log('Playback prevented:', error);
+                });
+            }
+        });
     </script>
     <script src="script.js"></script>
 </body>
