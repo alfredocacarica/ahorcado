@@ -13,7 +13,7 @@ body {
 #borde-izquierdo, #borde-derecho {
     height: 695px;
     width: 110px;
-    background-color: black; /* Puedes cambiar el color si deseas */
+    background-color: black;
 }
 
 #borde-izquierdo {
@@ -28,57 +28,8 @@ body {
 .game-container {
     text-align: center;
     margin: 100px auto;
-    width: 300px; /* Ajusta el ancho del contenedor del juego */
-    color: white; /* Cambia el color del texto para que sea visible */
-}
-
-/* Canvas del ahorcado */
-canvas {
-    margin-top: 20px;
-}
-
-/* Fuente personalizada */
-@font-face {
-    font-family: bloody;
-    src: url(BLOODY.TTF);
-}
-
-/* Input de letra */
-input[type="text"] {
-    font-family: bloody;
-    color: aliceblue;
-    background-image: url(bloody_button.png);
-    width: 200px;
-    height: 30px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
-    margin: 10px 3px;
-    text-align: center; /* Centra el texto en el input */
-    border: none; /* Quita el borde del input */
-    outline: none; /* Quita el borde al hacer clic en el input */
-    padding: 5px; /* Ajusta el espaciado interno */
-}
-
-/* Botones */
-button {
-    font-family: bloody;
-    color: aliceblue;
-    background-image: url(bloody_button.png);
-    width: 150px;
-    height: 40px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black;
-    border: none; /* Quita el borde del botón */
-    cursor: pointer;
-    margin: 10px 3px;
-}
-
-/* Estilo del botón al pasar el cursor */
-button:hover {
-    opacity: 0.8; /* Efecto de opacidad al pasar el cursor */
-    transform: scale(1.05); /* Agranda ligeramente el botón */
+    width: 300px;
+    color: white;
 }
 
 /* Contenedor de las imágenes del ahorcado */
@@ -97,57 +48,89 @@ button:hover {
 
 #base {
     bottom: 0;
-    /* Ajusta la posición según sea necesario */
 }
 
 #palo {
     bottom: 50px;
-    /* Ajusta la posición según sea necesario */
 }
 
 #parte-arriba {
     bottom: 150px;
-    /* Ajusta la posición según sea necesario */
 }
 
-#head {
+#left-leg {
+    bottom: 100px;
+    left: 15%; /* Ajusta según sea necesario */
+}
+
+#right-leg {
+    bottom: 100px;
+    right: 15%; /* Ajusta según sea necesario */
+}
+
+#left-arm {
     bottom: 200px;
-    /* Ajusta la posición según sea necesario */
+    left: 15%;
+}
+
+#right-arm {
+    bottom: 200px;
+    right: 15%;
 }
 
 #body {
     bottom: 250px;
-    /* Ajusta la posición según sea necesario */
 }
 
-#right-arm {
-    bottom: 250px;
-    right: 10px;
-}
-
-#left-arm {
-    bottom: 250px;
-    left: 10px;
-}
-
-#right-leg {
-    bottom: 200px;
-    right: 10px;
-}
-
-#left-leg {
-    bottom: 200px;
-    left: 10px;
+#head {
+    bottom: 300px;
 }
 
 #hangman-container img {
     display: block;
     margin: 0 auto;
-    width: 80px; /* Ajusta el tamaño de las imágenes del ahorcado */
+    width: 80px;
+}
+
+/* Input de letra */
+input[type="text"] {
+    font-family: bloody;
+    color: aliceblue;
+    background-image: url(bloody_button.png);
+    width: 200px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    margin: 10px 3px;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+/* Botones */
+button {
+    font-family: bloody;
+    color: aliceblue;
+    background-image: url(bloody_button.png);
+    width: 150px;
+    height: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    margin: 10px 3px;
+}
+
+button:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
 /* Ajustes de texto para los mensajes y las letras adivinadas */
 #word-display, #message {
     font-size: 20px;
     margin-top: 20px;
-}  
+}
