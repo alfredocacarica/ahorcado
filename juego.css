@@ -9,20 +9,8 @@ body {
     color: white;
 }
 
-/* Bordes laterales */
-#borde-izquierdo, #borde-derecho {
-    height: 695px;
-    width: 110px;
-    background-color: black;
-}
 
-#borde-izquierdo {
-    float: left;
-}
 
-#borde-derecho {
-    float: right;
-}
 
 /* Contenedor del juego */
 .game-container {
@@ -106,12 +94,16 @@ input[type="text"] {
     background-color: black;
     margin: 10px 3px;
     text-align: center;
-    border: none;
     outline: none;
     padding: 5px;
+    border-radius: 10px;
+    
+}
+input:hover{
+    cursor: url('cursor.png'), auto;
 }
 
-/* Botones */
+
 button {
     font-family: bloody;
     color: aliceblue;
@@ -121,17 +113,26 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: black;
-    border: none;
-    cursor: pointer;
     margin: 10px 3px;
+    border-radius: 10px;
+    animation: blink 2s infinite;
 }
-
+body:hover{
+    cursor: url('rata2.png'), auto;
+}
 button:hover {
     opacity: 0.8;
     transform: scale(1.05);
-}
+    cursor: url('cursor.png'), auto;
 
-/* Ajustes de texto para los mensajes y las letras adivinadas */
+    
+}
+@keyframes blink { 
+0%, 50%, 100% { opacity: 1; } 
+25%, 75% { opacity: 0.3; } 
+} 
+
+
 #word-display, #message {
     font-size: 20px;
     margin-top: 20px;
