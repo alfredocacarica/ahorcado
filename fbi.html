@@ -6,14 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="fbi.css">
 </head>
-<body>
-    <script>
-        document.body.addEventListener('mouseover', function() {
-    setTimeout(() => {
-        window.location.href = 'comic.html';
-    },2000); 
-});
 
+<body>
+    <audio id="myAudio" autoplay> <source src="música de suspenso (suspense music) (2).mp3" type="audio/mpeg"> 
+    Tu navegador no soporta el elemento de audio. </audio> 
+    <script> 
+   window.addEventListener('load', function() 
+   { var audio = document.getElementById('myAudio'); audio.play(); });
+   setTimeout(() => { window.location.href = 'comic.html'; }, 5000); 
     </script>
 </body>
 </html>
