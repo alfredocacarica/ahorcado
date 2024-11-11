@@ -49,31 +49,33 @@ body {
 }
 
 #left-leg {
-    bottom: 100px;
-    left: 15%; /* Ajusta según sea necesario */
+    bottom: -25px;
+    left: 150px; /* Ajusta según sea necesario */
 }
 
 #right-leg {
-    bottom: 100px;
-    right: 15%; /* Ajusta según sea necesario */
+    bottom: -50px;
+    right: -530px; /* Ajusta según sea necesario */
 }
 
 #left-arm {
-    bottom: 200px;
-    left: 15%;
+    bottom: -160px;
+    left: 130px;
 }
 
 #right-arm {
-    bottom: 200px;
-    right: 15%;
+    bottom: -170px;
+    right: -550px;
 }
 
 #body {
-    bottom: 250px;
+    bottom: -100px;
+    right: -440px;
 }
 
 #head {
-    bottom: 300px;
+    bottom: -240px;
+    left: 160px;
 }
 
 #hangman-container img {
