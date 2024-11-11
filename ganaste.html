@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="ganaste.css">
 </head>
-<body onload="adelantarAudio()">
+<body onload="ganaste()">
    
     <div class="container"> 
         <img src="imagen de cuando ganas.png" alt="Imagen" class="base-image"> 
@@ -16,7 +16,7 @@
 
 <audio id="miAudio" src="efecto de sonido de niños celebrando.mp3"></audio>
 
-<script> function adelantarAudio() { var audio = document.getElementById('miAudio'); 
+<script> function ganaste() { var audio = document.getElementById('miAudio'); 
 audio.volume = 1.0;
 audio.play().catch(function(error) { console.log('Playback prevented:', error); });
 } 

@@ -6,11 +6,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="perdiste.css">
 </head>
-<body>
+<body onload="perdiste()">
     
     <div class="container">
         <img src="perdiste4.jpg" alt="">
     </div>
     <button class="skip-intro" onclick="location.href='juego.html'">Volver</button>
+
+    <audio id="miAudio" src="Porta - Hay siempre un sentimiento muerto en un corazón roto.mp3"></audio>
+
+<script> function perdiste() { var audio = document.getElementById('miAudio'); 
+audio.volume = 1.0;
+audio.play().catch(function(error) { console.log('Playback prevented:', error); });
+} 
+</script>
 </body>
 </html>
