@@ -47,15 +47,17 @@ body {
 }
 
 #base {
-    bottom: 0;
+    bottom: -100px;
 }
 
 #palo {
-    bottom: 50px;
+    bottom: -120px;
+    left: 130px;
 }
 
 #parte-arriba {
-    bottom: 150px;
+    bottom: 50px;
+    left: 120px;
 }
 
 #left-leg {
