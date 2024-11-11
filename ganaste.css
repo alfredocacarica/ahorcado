@@ -7,7 +7,7 @@ div{
     background-repeat: no-repeat;
 }
 img{
-    height: 700px;
+    height: 750px;
     width: 900px;
 }
 @font-face {
@@ -16,8 +16,8 @@ img{
 }
 button {  
 position: absolute;
-bottom: 17px;
-right: 200px;
+bottom: 27px;
+right: 190px;
 padding: 10px 20px;
 background-color: #ff0000;
 color: white;

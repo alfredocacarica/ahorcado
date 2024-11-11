@@ -86,6 +86,11 @@ function resetGame() {
     updateWordDisplay();
     updateHangmanImage(); // Restablece la imagen del ahorcado
 }
+document.getElementById("letter-input").addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        guessLetter();
+    }
+});
 
 updateWordDisplay();
 document.getElementById("attempts").innerText = attemptsLeft;
