@@ -10,7 +10,7 @@ function updateWordDisplay() {
 
 // Función para actualizar la imagen del ahorcado según los intentos restantes
 function updateHangmanImage() {
-    const parts = ["base", "palo", "parte-arriba", "left-leg", "right-leg", "left-arm", "right-arm", "body", "head"];
+    const parts = ["base", "palo", "parte-arriba", "left-leg", "right-leg", "body", "left-arm", "right-arm", "head"];
     const visibleParts = 9 - attemptsLeft;
 
     // Oculta todas las partes primero
