@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="perdiste()">
+    <style>
+        body{
+            background-image: url(rata2.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+    </style>
+    <audio src="LOS PALMERAS BOMBON ASESINO.mp3" id="miAudio"></audio>
+    <script> function perdiste() { var audio = document.getElementById('miAudio'); 
+        audio.volume = 1.0;
+        audio.play().catch(function(error) { console.log('Playback prevented:', error); });
+        } 
+        </script>
+</body>
+</html>
