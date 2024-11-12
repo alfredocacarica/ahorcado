@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>THE HANGED MAN</title>
     <link rel="stylesheet" href="fbi.css">
 </head>
 
 <body>
-    <audio id="myAudio" autoplay> <source src="música de suspenso (suspense music) (2).mp3" type="audio/mpeg"> 
+    <audio id="myAudio" autoplay> <source src="National Emergency Alert System Test (November  9, 2011) - Absolutely Definite (youtube) (1).mp3" type="audio/mpeg"> 
     Tu navegador no soporta el elemento de audio. </audio> 
     <script> 
    window.addEventListener('load', function() 
-   { var audio = document.getElementById('myAudio'); audio.play(); });
-   setTimeout(() => { window.location.href = 'comic.html'; }, 5000); 
+   { var audio = document.getElementById('myAudio'); audio.play();
+   audio.currentTime = 41;
+    });
+   setTimeout(() => { window.location.href = 'comic.html'; }, 10000); 
     </script>
 </body>
 </html>

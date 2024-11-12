@@ -14,6 +14,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgb(20, 20, 20);
+    overflow: hidden;
 }
 
 /* Contenedor de la TV */

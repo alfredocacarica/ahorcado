@@ -13,6 +13,7 @@ body {
     background-size: cover;
     cursor: url("[CITYPNG.COM]HD Realistic Bloody Hand Print Image PNG - 5500x5500.png"), auto;
     background-repeat: no-repeat;
+    overflow: hidden;
     
 }
 

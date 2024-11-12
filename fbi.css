@@ -2,5 +2,6 @@ body{
 background-image: url(FBI.jpg);
 background-repeat: no-repeat;
 background-size: cover;
+overflow: hidden;
 }
 

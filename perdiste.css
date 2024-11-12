@@ -3,9 +3,18 @@ body{
     flex-direction: column;
     background-color: black;
     margin: 0 auto;   
-    background-image:url(bloody_button.png);
+ background-image: url(Blood-Red-Frame-Transparent-Image.png);
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
+}
+.borde{
+    width: 100vw; /* Ancho completo de la ventana */ 
+    height: 100px; /* Alto completo de la ventana */ 
+    object-fit: cover; /* Cubrir toda la pantalla sin distorsión */ 
+    position: absolute; /* Posicionamiento absoluto para cubrir toda la pantalla */ 
+    top: 0; 
+    left: 0;
 }
 .container{
     padding: 30px;

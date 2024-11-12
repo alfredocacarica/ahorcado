@@ -1,6 +1,11 @@
-let word = "ejemplo"; // La palabra que se va a adivinar
-let attemptsLeft = 9; // Ahora hay 9 intentos
-let guessedLetters = []; // Letras que el usuario ha adivinado
+let words = ["ejemplo", "javascript", "ahorcado", "computadora", "programacion"]; // Array de palabras
+let word = ""; // La palabra que se usará en el juego
+let attemptsLeft = 9;
+let guessedLetters = [];
+
+function chooseRandomWord() {
+    word = words[Math.floor(Math.random() * words.length)];
+}
 
 // Mostrar la palabra oculta en el juego
 function updateWordDisplay() {
@@ -81,6 +86,7 @@ function checkGameOver() {
 function resetGame() {
     attemptsLeft = 9;
     guessedLetters = [];
+    chooseRandomWord(); // Selecciona una nueva palabra
     document.getElementById("attempts").innerText = attemptsLeft;
     document.getElementById("message").innerText = "";
     updateWordDisplay();
@@ -92,6 +98,7 @@ document.getElementById("letter-input").addEventListener("keypress", function(ev
     }
 });
 
+chooseRandomWord();
 updateWordDisplay();
 document.getElementById("attempts").innerText = attemptsLeft;
-updateHangmanImage(); // Inicializa la imagen del ahorcado
+updateHangmanImage(); 

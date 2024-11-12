@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego del Ahorcado</title>
+    <title>THE HANGED MAN</title>
     <link rel="stylesheet" href="juego.css"> 
 </head>
 <body>
@@ -31,14 +31,13 @@
             <p id="message"></p>
             <button onclick="resetGame()">Reiniciar Juego</button>
 
-            <!-- Audios para los eventos del juego -->
+
             <audio id="wrong-sound" src="risa billy (saw).mp3"></audio>
             <audio id="win-sound" src="Happy Wheels victory green screen.mp3"></audio> 
             <audio id="lose-sound" src="trompeta perdedor.mp3"></audio>
         </div>
     </main>
-    
-    <!-- Audio de fondo activado al mover el mouse -->
+
     <audio id="hoverAudio" src="On Silent Wings (Instrumental) (Remastered).mp3" loop></audio>
     <script>
         document.body.addEventListener('mouseover', function() {
