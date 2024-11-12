@@ -1,5 +1,5 @@
-let words = ["ejemplo", "javascript", "ahorcado", "computadora", "programacion"]; // Array de palabras
-let word = ""; // La palabra que se usará en el juego
+let words = ["javascript", "ahorcado", "computadora", "programacion","terror","locura","extasis","kircher","psicologia","banfield","villa","manaos","pichita","zavaleta","preceptor"]; // Array de palabras
+let word = ""; 
 let attemptsLeft = 9;
 let guessedLetters = [];
 
@@ -7,23 +7,23 @@ function chooseRandomWord() {
     word = words[Math.floor(Math.random() * words.length)];
 }
 
-// Mostrar la palabra oculta en el juego
+
 function updateWordDisplay() {
     let display = word.split("").map(letter => guessedLetters.includes(letter) ? letter : "_").join(" ");
     document.getElementById("word-display").innerText = `Palabra: ${display}`;
 }
 
-// Función para actualizar la imagen del ahorcado según los intentos restantes
+
 function updateHangmanImage() {
     const parts = ["base", "palo", "parte-arriba", "left-leg", "right-leg", "body", "left-arm", "right-arm", "head"];
     const visibleParts = 9 - attemptsLeft;
 
-    // Oculta todas las partes primero
+    
     parts.forEach(part => {
         document.getElementById(part).style.display = "none";
     });
 
-    // Muestra las partes necesarias según los intentos restantes
+    
     for (let i = 0; i < visibleParts; i++) {
         document.getElementById(parts[i]).style.display = "block";
     }
